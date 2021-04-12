@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synergy of Diaspora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Hide forms upon loading page
+            $(".modallogin").hide();
+            $(".modaljoin").hide();
+
+            // Show forms upon clicking buttons
+            $("#login").click(function () {
+                $(".modallogin").show();
+                $(".modaljoin").hide();
+            });
+
+            $("#join").click(function () {
+                $(".modaljoin").show();
+                $(".modallogin").hide();
+            });
+        })
+    </script>
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <h1>
+        SynerD <br />
+        Synergy of Diaspora
+    </h1>
+
+    <h2 id="purposeQuote">
+        <a href="index.html"><img src="logo.png" alt="logo" id="synerD"></a>
+        <p id="quote"><i>Let's Serve Purposefully</i></p>
+        <br>
+        <div id="gethere" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/128/coin-us-dollar-icon.png"
+                alt="coin" width="70px" height="80px" draggable="true" ondragstart="drag(event)" />
+        </div>
+        <button id="donate" ondrop="drop(event)" ondragover="allowDrop(event)" id="drophere" type="submit"
+            onclick="donateClick()">Donate <img src="http://redboxeasyweb.com/wp-content/uploads/icon-piggybank.png"
+                width="70px" height="80px" id="money" /> </button>
+
+
+    </h2>
+
+
+
+    <div class="accountForm">
+        <div class="memberLink">
+            <ul>
+                <li class="midlinks"><button id="login" onclick="login()">Login</button></li>
+                <li class="midlinks"><button id="join"><a href="JoinUs.html">Join</a></button></li>
+            </ul>
+        </div>
+        </div>
+        
+        
+        
+        <div class="social">
+            <a href="#"><img src="twitter.png" alt="twitter" class="socialLinks"></a>
+            <a href="#"> <img src="facebook.png" alt="facebook" class="socialLinks"></a>
+            <a href="#"><img src="youtube.png" alt="youtube" class="socialLinks"></a>
+        </div>
+        
+        <div class="navBar">
+            <nav id="nav1">
+                <ul class="links1">
+                    <li class="toplinks"><a href="">Galleries</a></li>
+                    <li class="toplinks"><a href="">About Us</a></li>
+                    <li class="toplinks"><a href="">Contact Us</a></li>
+                    <li class="toplinks"><a href="">Our Work</a></li>
+                    <li class="toplinks"><a href="">Members</a></li>
+                    <li class="toplinks"><a href="#">Web Portal</a></li>
+                    <li class="toplinks"><input type="text" id="search"><button type="submit">Search</button></li>
+                </ul>
+            </nav>
+        </div>
+       <!-----member search bar----->
+        <div class="container col-md-4">
+            <h2 class="text-center">Members</h2>
+            <input type="text" class="form-control form-control-lg" id="filter-input" placeholder="Search names/ID">
+        
+            <div id="names">
+        
+              <div class="card mt-4">
+                <div class="card-header">A</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">Adam-01</a></p>
+                  <p class="card-text"><a href="#">Alecia-02</a></p>
+                  <p class="card-text"><a href="#">Alan-03</a></p>
+                  <p class="card-text"><a href="#">Alex-04</a></p>
+                  <p class="card-text"><a href="#">Anna-05</a></p>
+                  <p class="card-text"><a href="#">Amber-06</a></p>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header">B</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">Bonny-07</a></p>
+                  <p class="card-text"><a href="#">Bill-08</a></p>
+                  <p class="card-text"><a href="#">Bob-09</a></p>
+                  <p class="card-text"><a href="#">Brad-10</a></p>
+                  <p class="card-text"><a href="#">Beny-11</a></p>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header">C</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">Claudia-12</a></p>
+                  <p class="card-text"><a href="#">Cathy-13</a></p>
+                  <p class="card-text"><a href="#">Cris-14</a></p>
+                </div>
+              </div>
+        
+              <div class="card">
+                <div class="card-header">D</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">David-15</a></p>
+                  <p class="card-text"><a href="#">Dean-16</a></p>
+                  <p class="card-text"><a href="#">Diana-17</a></p>
+                  <p class="card-text"><a href="#">Don-18</a></p>
+                  <p class="card-text"><a href="#">Denis-19</a></p>
+                </div>
+              </div>
+              
+                    <div class="card">
+                <div class="card-header">E</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">Eli</a></p>
+                  <p class="card-text"><a href="#">Evan</a></p>
+                  <p class="card-text"><a href="#">Ethan</a></p>
+                </div>
+              </div>
+              
+                    <div class="card">
+                <div class="card-header">F</div>
+                <div class="card-inner">
+                  <p class="card-text"><a href="#">Frank</a></p>
+                  <p class="card-text"><a href="#">Florence</a></p>
+                  <p class="card-text"><a href="#">Frida</a></p>
+                  <p class="card-text"><a href="#">Felix</a></p>
+                  <p class="card-text"><a href="#">Fabian</a></p>
+                </div>
+              </div>
+        
+            </div>
+        
+          </div>
+          <script>
+              // Get input element
+let filterInput = document.getElementById('filter-input');
+
+// Add event listener
+filterInput.addEventListener('keyup', filterNames);
+
+function filterNames() {
+  // Get value of input
+  let filterValue = document.getElementById('filter-input').value.toUpperCase();
+  
+  // Get names
+  let names = document.getElementById('names');
+  let items = names.querySelectorAll('p.card-text');
+  
+  // Loop through items
+  for(let i = 0; i < items.length; i++) {
+    let a = items[i].getElementsByTagName('a')[0];
+    
+    // If match
+    if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      items[i].style.display = '';
+    } else {
+      items[i].style.display = 'none';
+    }
+  }
+}
+          </script>
+</html>

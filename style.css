@@ -1,0 +1,551 @@
+/*Remove default margins*/
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Set BG color*/
+body {
+	background-color: rgb(235, 224, 210);
+}
+
+/*Import Fonts*/
+@font-face {
+	font-family: 'Comfortaa';
+	src: url(Comfortaa-VariableFont_wght.ttf);
+}
+
+/*Position content items*/
+h1 {
+	text-align: left;
+	float: left;
+	font-size: 45px;
+	font-family: 'Comfortaa';
+	color: rgb(235, 154, 78);
+	text-decoration-line: overline;
+	letter-spacing: -2px;
+	height: 30px;
+	width: 30%;
+	margin: 1px 20px 30px; /*top right-left bottom*/
+}
+
+#synerD {
+	margin: 0px 250px 0px;
+	padding: 0%;
+	height: 80px;
+	width: 80px;
+	float: left;
+}
+
+#quote {
+	float: inline-start;
+	margin: auto;
+}
+
+#purposeQuote {
+	float: left;
+	width: 65%;
+	text-align: right;
+	font-family: 'Comfortaa';
+	font-size: 30px;
+	color: rgb(235, 154, 78);
+}
+
+/*Position navigation items*/
+.navBar {
+	/* width: 65%;
+	margin: auto; */
+	position: absolute;
+    left: 155px;
+    top: 255px;
+}
+
+#nav1 {
+	float: left;
+	width: 100%;
+	text-align: right;
+	margin: auto;
+}
+
+.accountForm {
+	float: left;
+	width: 100%;
+}
+
+.memberLink {
+	text-align: center;
+	float: right;
+	margin-right: 15px;
+	width: 30%;
+	margin: auto;
+}
+
+.modallogin,
+.modaljoin {
+	position: fixed;
+	z-index: 1;
+	padding-top: 200px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: transparent;
+}
+
+.loginForm,
+.joinForm {
+	width: 60%;
+	height: auto;
+	margin: auto;
+	padding: 10px;
+}
+
+/*Style forms*/
+#joinForm {
+	max-width: auto;
+	max-height: auto;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	columns: 2;
+	column-gap: 30px;
+}
+
+#loginForm {
+	max-width: 50%;
+	max-height: auto;
+	padding: 10px;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	columns: 2;
+	column-gap: 30px;
+	align-items: center;
+}
+
+#officeForm,
+#officeForm2,
+#officeForm3,
+#officeForm4,
+#officeForm5 {
+	max-width: auto;
+	max-height: auto;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	columns: 2;
+	column-gap: 30px;
+}
+
+.input {
+	flex-grow: 1;
+	box-sizing: border-box;
+	font-size: 1rem;
+	font-weight: 100;
+	margin: 5px 0 15px;
+	padding: 10px;
+	border: none;
+	line-height: 1;
+	transition: border-color 0.2s;
+	border-bottom: 1px solid chocolate;
+}
+
+.input:focus {
+	outline: none;
+	border-color: rgb(0, 0, 0, 0.5);
+}
+
+/*Style SVG*/
+.arrow {
+	width: 1rem;
+	opacity: 0;
+	order: -1;
+	transition: all 0.2s;
+	transform: translateX(-100%);
+}
+
+.arrow path {
+	stroke: black;
+	stroke-width: 1px;
+	fill: none;
+}
+
+.arrow:focus + .arrow {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+/*Style form buttons*/
+#login,
+#join {
+	background-color: chocolate;
+	color: white;
+	padding: 10px 15px; /*top-bottom right-left*/
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.75;
+}
+
+#submit,
+#close {
+	background-color: chocolate;
+	color: white;
+	padding: 10px 15px; /*top-bottom right-left*/
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 80%;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	opacity: 0.75;
+}
+
+#message,
+#emailError,
+#usernameMessage,
+#dateError {
+	display: none;
+	font-size: 10px;
+	font-family: 'Comfortaa';
+	font-weight: 800;
+	color: red;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+/*Links within Nav tags display*/
+.links1,
+.memberLink {
+	list-style: none;
+}
+
+.links1,
+.toplinks {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.midlinks {
+	display: inline-block;
+	padding: 0px;
+}
+
+.links1 {
+	background-color: rgb(243, 236, 226);
+	overflow: hidden;
+	border: chocolate solid 2px;
+	border-radius: 5px;
+}
+
+/*Nav link button display*/
+.toplinks {
+	color: white;
+	text-align: center;
+	font-family: 'Comfortaa';
+	padding: 10px 12px;
+	text-decoration: none;
+}
+
+.toplinks:hover {
+	background-color: rgb(204, 139, 92);
+	transition: 0.5s;
+}
+.socialLinks {
+	border-radius: 50%;
+	margin: 0px auto;
+	width: 50px;
+	height: 50px;
+}
+
+.social {
+	position: fixed;
+	width: 50px;
+	height: 155px;
+	margin-left: 50px;
+	margin-top: 100px;
+	padding: 10px;
+}
+
+#donate {
+	margin: 15px;
+}
+
+/*Dynamically assign style and size to containers*/
+.containerMother {
+	width: 85%;
+	margin: auto;
+	height: 200px;
+}
+
+.bottom {
+	float: left;
+	width: 99.5%;
+	height: 130px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.contactInfo,
+.motivatingQuote,
+.partners {
+	width: 25%;
+	margin: 1px 55px 1px;
+	display: inline-block;
+}
+
+.contactInfo {
+	margin-left: 75px;
+}
+
+.motivatingQuote {
+	text-align: center;
+}
+
+.partners {
+	text-align: right;
+}
+
+footer {
+	float: left;
+	width: 100%;
+	height: 50px;
+}
+.slider-title {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+}
+.mySlides {
+	display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 60%;
+	height: 700px;
+	margin-left: 20%;
+	float: left;
+}
+
+.information {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px 50px;
+}
+
+#articles {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px 50px;
+	font-size: 20px;
+	columns: 2;
+	column-gap: 30px;
+}
+
+#news,
+.newsPic {
+	text-align: center;
+}
+
+.donation-meter {
+	margin-left: 350px;
+	width: 100px;
+}
+.glass {
+	background: rgb(255, 255, 255);
+	border-radius: 100px 100px 0 0;
+	display: block;
+	height: 290px;
+	margin: 0 35px 10px;
+	padding: 5px;
+	position: relative;
+	width: 20px;
+}
+.amount {
+	background: rgb(161, 79, 1);
+	border-radius: 100px;
+	display: block;
+	width: 20px;
+	position: absolute;
+	bottom: 5px;
+}
+
+strong {
+	display: block;
+	text-align: center;
+}
+
+.goal {
+	font-size: 30px;
+}
+.total {
+	font-size: 16px;
+	position: absolute;
+	right: 35px;
+}
+
+.bulb {
+	background: rgb(255, 255, 255);
+	border-radius: 100px;
+	display: block;
+	height: 50px;
+	margin: 0 35px 10px;
+	padding: 5px;
+	position: relative;
+	top: -20px;
+	right: 15px;
+	width: 50px;
+}
+
+.bulbFill {
+	background: rgb(161, 79, 1);
+	border-radius: 100px;
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+.filler {
+	background: rgb(161, 79, 1);
+	border-radius: 100px 100px 0 0;
+	display: block;
+	height: 30px;
+	width: 20px;
+	position: relative;
+	top: -65px;
+	right: -15px;
+	z-index: 30;
+}
+
+.photos {
+	display: inline-block;
+	object-fit: cover;
+	margin: auto;
+}
+
+.gallery {
+	text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	float: bottom;
+	transition: background-color 0.6s ease;
+}
+.active {
+	background-color: #717171;
+}
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 35.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.text {
+		font-size: 11px;
+	}
+}
+/*drag & drop*/
+#drophere {
+	@extend .box;
+	display: inline-block;
+}
+#gethere {
+	@extend .box;
+	display: inline-block;
+}
+
+hr {
+	border: 1px solid black;
+	margin-bottom: 40px;
+	width: 95%;
+}
+/*geolocation*/
+.googleMap {
+	position: relative;
+	height: 0;
+	padding-bottom: 50%;
+}
+
+.googleMap iframe {
+	position: absolute;
+	top: -340px;
+	left: 0;
+	width: 240px;
+	height: 200px;
+}
+/*<---Members------------------------------------>*/
+
+.card {
+	margin-top: 10px;
+	-webkit-box-shadow: 4px 3px 18px 1px rgba(0,0,0,0.18);
+	-moz-box-shadow: 4px 3px 18px 1px rgba(0,0,0,0.18);
+	box-shadow: 4px 3px 18px 1px rgba(0,0,0,0.18);
+  }
+  
+  .card-inner .card-text {
+	margin: 5px 0;
+	padding-left: 20px;
+	transition: 250ms;
+	height: 25px;
+  }
+  
+  .card-inner .card-text:hover {
+	background: #ccc;
+  }
+  
+  .card a {
+	display: block;
+	text-decoration: none!important;
+  
+  }
+  
+  .card a:hover {
+	color: #fff;
+  }
+  
+  .card-header {
+	font-weight: bold;
+	padding: 5px 0 5px 10px;
+  }
+  
+  .card-text a {
+	  color: #333;
+  }
